@@ -6,3 +6,7 @@
 
 ## 範例
 [Sample Code](https://www.casper.tw/react-2023-homework/)
+
+## History 
+
+- **2023-08-11：deploy gh-page**
