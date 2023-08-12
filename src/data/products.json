@@ -6,7 +6,7 @@
             "description": "香濃奶茶搭配QQ珍珠",
             "price": 50,
             "inventory": 20,
-            "image": "/images/Bubble-Milk-Tea.png"
+            "image": "public/images/Bubble-Milk-Tea.png"
         },
         {
             "id": 2,
@@ -14,7 +14,7 @@
             "description": "清新冬瓜配上新鮮檸檬",
             "price": 45,
             "inventory": 15,
-            "image": "/images/Winter-Melon-Lemon-Tea.jpg"
+            "image": "public/images/Winter-Melon-Lemon-Tea.jpg"
         },
         {
             "id": 3,
@@ -22,7 +22,7 @@
             "description": "綠茶與檸檬的完美結合",
             "price": 55,
             "inventory": 30,
-            "image": "/images/Lemon-Premium-Green-Tea.jpg"
+            "image": "public/images/Lemon-Premium-Green-Tea.jpg"
         },
         {
             "id": 4,
@@ -30,7 +30,7 @@
             "description": "香醇四季春茶，回甘無比",
             "price": 45,
             "inventory": 10,
-            "image": "/images/Four-Season-Green-Tea.jpg"
+            "image": "public/images/Four-Season-Green-Tea.jpg"
         },
         {
             "id": 5,
@@ -38,7 +38,7 @@
             "description": "阿薩姆紅茶搭配香醇鮮奶",
             "price": 50,
             "inventory": 25,
-            "image": "/images/Assam-Milk-Tea.jpg"
+            "image": "public/images/Assam-Milk-Tea.jpg"
         },
         {
             "id": 6,
@@ -46,7 +46,7 @@
             "description": "檸檬與冰茶的清新組合",
             "price": 45,
             "inventory": 20,
-            "image": "/images/Lemon-Iced-Tea.jpg"
+            "image": "public/images/Lemon-Iced-Tea.jpg"
         },
         {
             "id": 7,
@@ -54,7 +54,7 @@
             "description": "芒果與綠茶的獨特風味",
             "price": 55,
             "inventory": 18,
-            "image": "/images/Mango-Green-Tea.jpg"
+            "image": "public/images/Mango-Green-Tea.jpg"
         },
         {
             "id": 8,
@@ -62,7 +62,7 @@
             "description": "抹茶與鮮奶的絕配",
             "price": 60,
             "inventory": 20,
-            "image": "/images/Matcha-Latte.jpg"
+            "image": "public/images/Matcha-Latte.jpg"
         }
     ]
 }

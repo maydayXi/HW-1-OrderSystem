@@ -8,12 +8,33 @@
 [Sample Code](https://www.casper.tw/react-2023-homework/)
 
 ## History 
-
-- **2023-08-11**
-deploy gh-page
-Add products.json Level 1 Finished.
-v 0.0.1
-- **2023-08-13**
-add product images
-reset index, index style and App entry point
-v 0.0.2
+<table>
+    <thead>
+        <tr>
+            <th style="text-align: center;">Date</th>
+            <th style="text-align: center;">Version</th>
+            <th style="text-align: center;">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="2" style="text-align: center; font-weight: bolder;">2023-08-11</td>
+            <td rowspan="2" style="font-weight: bolder;">V 0.0.1</td>
+            <td>deploy gh-pages</td>
+        </tr>
+        <tr>
+            <td>Add products.json, Level 1 finished.</td>
+        </tr>
+        <tr>
+            <td rowspan="3" style="text-align: center; font-weight: bolder;">2023-08-13</td>
+            <td rowspan="3" style="font-weight: bolder;">V 0.0.2</td>
+            <td>Add product images</td>
+        </tr>
+        <tr>
+            <td>Reset index, index style, App.jsx</td>
+        </tr>
+        <tr>
+            <td>Move product images -> public</td>
+        </tr>
+    </tbody>
+</table>
