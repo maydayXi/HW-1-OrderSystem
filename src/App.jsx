@@ -1,22 +1,11 @@
 
 import data from './data/products.json'
+import ProductCard from './components/ProductCard';
 
 function App() {
   return (
-    <div>
-      {data.products.map(product => {
-        return (
-          <div key={product.id} className='d-flex'>
-            <img src={product.image} width="150px" />
-            <span>{product.name}</span>
-            <span>{product.description}</span>
-            <span>${product.price}</span>
-            +
-            <span>{product.inventory}</span>
-            -
-          </div>
-        )
-      })}
+    <div className='d-flex flex-column row-gap'>
+      {data.products.map(product => (<ProductCard key={product.id} {...product}/>))}
     </div>
   );
 }
