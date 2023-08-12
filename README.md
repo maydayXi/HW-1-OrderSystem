@@ -9,4 +9,11 @@
 
 ## History 
 
-- **2023-08-11：deploy gh-page**
+- **2023-08-11**
+deploy gh-page
+Add products.json Level 1 Finished.
+v 0.0.1
+- **2023-08-13**
+add product images
+reset index, index style and App entry point
+v 0.0.2
