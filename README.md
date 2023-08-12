@@ -26,7 +26,7 @@
             <td>Add products.json, Level 1 finished.</td>
         </tr>
         <tr>
-            <td rowspan="3" style="text-align: center; font-weight: bolder;">2023-08-13</td>
+            <td rowspan="5" style="text-align: center; font-weight: bolder;">2023-08-13</td>
             <td rowspan="3" style="font-weight: bolder;">V 0.0.2</td>
             <td>Add product images</td>
         </tr>
@@ -35,6 +35,13 @@
         </tr>
         <tr>
             <td>Move product images -> public</td>
+        </tr>
+        <tr>
+            <td rowspan="2">V 0.0.3</td>
+            <td>Update website title</td>
+        </tr>
+        <tr>
+            <td>Update products image path</td>
         </tr>
     </tbody>
 </table>
