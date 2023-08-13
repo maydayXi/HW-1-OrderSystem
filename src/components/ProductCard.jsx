@@ -2,11 +2,10 @@ import PropTypes from 'prop-types';
 import ProductImage from './ProductImage';
 import ProductInfo from './ProductInfo';
 
-const ProductCard = ({image, name, ...rest}) => {
-    const info = {name, ...rest};
+const ProductCard = ({image, ...info}) => {
     return (
         <div className='product-card d-flex column-gap'>
-            <ProductImage image={image} name={name} />
+            <ProductImage image={image} />
             <ProductInfo {...info} />
         </div>
     );

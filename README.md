@@ -26,7 +26,7 @@
             <td>Add products.json, Level 1 finished.</td>
         </tr>
         <tr>
-            <td rowspan="11" style="text-align: center; font-weight: bolder;">2023-08-13</td>
+            <td rowspan="13" style="text-align: center; font-weight: bolder;">2023-08-13</td>
             <td rowspan="3" style="font-weight: bolder;">V 0.0.2</td>
             <td>Add product images</td>
         </tr>
@@ -62,6 +62,13 @@
         </tr>
         <tr>
             <td>Add counter button style</td>
+        </tr>
+        <tr>
+            <td rowspan="2">V 0.1.0</td>
+            <td>Extract Inventory Counter from ProductInfo</td>
+        </tr>
+        <tr>
+            <td>Update Product Image style</td>
         </tr>
     </tbody>
 </table>

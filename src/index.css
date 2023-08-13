@@ -60,6 +60,15 @@ body {
 }
 /* #endregion */
 
+/* #region Product image */
+.product-image {
+  display: inline-block;
+  flex: 1;
+  min-width: 200px;
+  height: 200px;
+}
+/* #endregion */
+
 /* #region Product-info */
 .product-info {
   justify-content: space-between;
