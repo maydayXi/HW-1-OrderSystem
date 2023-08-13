@@ -74,5 +74,9 @@
             <td>V 0.1.1</td>
             <td>Update Product counter button style</td>
         </tr>
+        <tr>
+            <td>V 0.1.3</td>
+            <td>Add Settings Modal and modal style</td>
+        </tr>
     </tbody>
 </table>
