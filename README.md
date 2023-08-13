@@ -26,7 +26,7 @@
             <td>Add products.json, Level 1 finished.</td>
         </tr>
         <tr>
-            <td rowspan="7" style="text-align: center; font-weight: bolder;">2023-08-13</td>
+            <td rowspan="11" style="text-align: center; font-weight: bolder;">2023-08-13</td>
             <td rowspan="3" style="font-weight: bolder;">V 0.0.2</td>
             <td>Add product images</td>
         </tr>
@@ -49,6 +49,19 @@
         </tr>
         <tr>
             <td>Add handler for update inventory</td>
+        </tr>
+        <tr>
+            <td rowspan="4">V 0.0.8</td>
+            <td>Add react-icons</td>
+        </tr>
+        <tr>
+            <td>Extract Product Image from ProductCard </td>
+        </tr>
+        <tr>
+            <td>Extract Product Info from ProductCard </td>
+        </tr>
+        <tr>
+            <td>Add counter button style</td>
         </tr>
     </tbody>
 </table>
