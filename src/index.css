@@ -10,11 +10,14 @@
   --color-main-tint-active: #fef1eb;
   --color-settings-hover: #d4d7da;
   --color-settings-active: #f0f1f2;
-  --rgb-shadow-sm: 0, 0, 0, .75;
-  --rgb-overlay: 0, 0, 0, .5;
+  --color-modal-text: #242326;
+  --color-input-border: #dee2e6;
+  --rgba-shadow-sm: 0, 0, 0, .75;
+  --rgba-overlay: 0, 0, 0, .5;
 
   /* size */
   --shadow-sm: 0 .125rem .25rem;
+  --input-padding: .375rem .75rem;
 }
 
 * {
@@ -72,7 +75,7 @@ button svg {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(var(--rgb-overlay));
+  background-color: rgba(var(--rgba-overlay));
   z-index: 15;
   overflow: hidden;
 }
@@ -82,7 +85,7 @@ button svg {
   background-color: var(--color-white);
   padding: 1rem;
   border-radius: 1rem;
-  box-shadow: var(--shadow-sm) rgba(var(--rgb-shadow-sm));
+  box-shadow: var(--shadow-sm) rgba(var(--rgba-shadow-sm));
 }
 /* #endregion */
 
@@ -205,10 +208,70 @@ button svg {
   z-index: 20;
   border-radius: 1rem;
   width: 50%;
+  color: var(--color-modal-text);
 }
 
 .settings-modal h1 {
   text-align: center;
+  margin-top: 0;
   letter-spacing: 1px;
+  color: var(--color-main);
+}
+
+.settings-modal .modal-group-icon {
+  width: 48px;
+  justify-content: start;
+  align-items: center;
+}
+
+.settings-modal label {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.settings-modal label span {
+  letter-spacing: 2px;
+}
+
+.settings-modal input {
+  line-height: 1.5;
+  padding: var(--input-padding);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  border-radius: .375rem;
+  border: 1px solid var(--color-input-border);
+}
+
+.settings-modal input:focus {
+  outline: 0;
+  box-shadow: 0 0 0 .25rem var(--color-main-active);
+}
+
+.settings-modal input:focus-visible {
+  border: 1px solid var(--color-main);
+  outline: none;
+}
+
+.settings-modal .modal-buttons {
+  justify-content: center;
+}
+
+.settings-modal .modal-buttons button {
+  padding: 0.5rem 3rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm) rgba(var(--rgba-shadow-sm));
+}
+
+.settings-modal .modal-buttons .btn-save {
+  background-color: var(--color-main);
+  color: var(--color-white);
+  border: none;
+}
+
+.settings-modal .modal-buttons .btn-return {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-main);
+  color: var(--color-main);
 }
 /* #endregion */

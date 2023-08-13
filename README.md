@@ -26,7 +26,7 @@
             <td>Add products.json, Level 1 finished.</td>
         </tr>
         <tr>
-            <td rowspan="15" style="text-align: center; font-weight: bolder;">2023-08-13</td>
+            <td rowspan="16" style="text-align: center; font-weight: bolder;">2023-08-13</td>
             <td rowspan="3" style="font-weight: bolder;">V 0.0.2</td>
             <td>Add product images</td>
         </tr>
@@ -77,6 +77,10 @@
         <tr>
             <td>V 0.1.3</td>
             <td>Add Settings Modal and modal style</td>
+        </tr>
+        <tr>
+            <td>V 0.1.4</td>
+            <td>Update Settings Modal style</td>
         </tr>
     </tbody>
 </table>
