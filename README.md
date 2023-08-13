@@ -26,7 +26,7 @@
             <td>Add products.json, Level 1 finished.</td>
         </tr>
         <tr>
-            <td rowspan="14" style="text-align: center; font-weight: bolder;">2023-08-13</td>
+            <td rowspan="15" style="text-align: center; font-weight: bolder;">2023-08-13</td>
             <td rowspan="3" style="font-weight: bolder;">V 0.0.2</td>
             <td>Add product images</td>
         </tr>
