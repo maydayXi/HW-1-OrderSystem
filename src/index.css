@@ -4,6 +4,12 @@
   --color-bg: #eaf2fb;
   --color-desc: #6c757d;
   --color-main: #f77539;
+  --color-main-hover: #f99e74;
+  --color-main-active: #fbba9c;
+  --color-main-tint-hover: #fde3dc;
+  --color-main-tint-active: #fef1eb;
+  --color-settings-hover: #d4d7da;
+  --color-settings-active: #f0f1f2;
   --rgb-shadow-sm: 0, 0, 0, .75;
 
   /* size */
@@ -27,6 +33,12 @@ body {
   justify-content: center;
   align-items: center;
   background: var(--color-bg);
+}
+
+button svg {
+  transform: scale(1.5);
+  margin-top: 4px;
+  stroke-width: 1.5px;
 }
 
 #root {
@@ -87,6 +99,26 @@ body {
 .product-name, .product-description {
   margin-top: 0;
 }
+
+.btn-settings {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.btn-settings.ripple:hover {
+  background: var(--color-settings-hover) radial-gradient(circle, transparent 1%, var(--color-settings-hover) 1%) center/15000%;
+}
+
+.btn-settings.ripple:active {
+  background-color: var(--color-settings-active);
+}
 /* #endregion */
 
 /* #region Inventory Counter */
@@ -102,10 +134,28 @@ body {
   cursor: pointer;
 }
 
+.inventory-counter button.ripple {
+  background-position: center;
+  transition: background .8s;
+}
+
+.inventory-counter button:active {
+  background-size: 100%;
+  transition: background 0s;
+}
+
 .inventory-counter .btn-plus {
   background-color: var(--color-main);
   color: var(--color-white);
   border: none;
+}
+
+.inventory-counter .btn-plus.ripple:hover {
+  background: var(--color-main-hover) radial-gradient(circle, transparent 1%, var(--color-main-hover) 1%) center/15000%;
+}
+
+.inventory-counter .btn-plus.ripple:active {
+  background-color: var(--color-main-active);
 }
 
 .inventory-counter .btn-sub {
@@ -114,10 +164,12 @@ body {
   border: 2px solid var(--color-main);
 }
 
-.inventory-counter button svg {
-  transform: scale(1.5);
-  margin-top: 4px;
-  stroke-width: 1.5px;
+.inventory-counter .btn-sub.ripple:hover {
+  background: var(--color-main-tint-hover) radial-gradient(circle, transparent 1%, var(--color-main-active) 1%) center/15000%;
+}
+
+.inventory-counter .btn-sub.ripple:active {
+  background-color: var(--color-main-tint-active);
 }
 
 .inventory-counter h2 {

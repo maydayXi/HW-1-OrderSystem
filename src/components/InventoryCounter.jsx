@@ -26,11 +26,11 @@ const InventoryCounter = ({price, inventory}) => {
     return (
         <div className='inventory-counter d-flex column-gap'>
             <h2>${price}</h2>
-            <InventoryButton className="btn-sub" clickHandler={subHandler}>
+            <InventoryButton className="btn-sub ripple" clickHandler={subHandler}>
                 <BsDash />
             </InventoryButton>
             <h2>{count}</h2>
-            <InventoryButton className="btn-plus" clickHandler={plusHandler}>
+            <InventoryButton className="btn-plus ripple" clickHandler={plusHandler}>
                 <BsPlus />
             </InventoryButton>
         </div>
