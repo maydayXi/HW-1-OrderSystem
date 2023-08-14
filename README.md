@@ -7,6 +7,11 @@
 ## 範例
 [Sample Code](https://www.casper.tw/react-2023-homework/)
 
+## Screenshot
+<img src="https://i.imgur.com/vtwIbsX.png" width="80%" alt="main frame">
+
+<img src="https://i.imgur.com/d9Ji4AB.png" width="80%" alt="settings modal">
+
 ## History 
 <table>
     <thead>
@@ -83,12 +88,16 @@
             <td>Update Settings Modal style</td>
         </tr>
         <tr>
-            <td rowspan="2" style="text-align: center; font-weight: bolder;">2023-08-14</td>
+            <td rowspan="3" style="text-align: center; font-weight: bolder;">2023-08-14</td>
             <td rowspan="2" style="font-weight: bolder;">V 0.2.0</td>
             <td>New Feature：Can update product information. Level 2 and Level 3 finished.</td>
         </tr>
         <tr>
             <td>Update settings modal style.</td>
+        </tr>
+        <tr>
+            <td>V 0.2.1</td>
+            <td>Add screenshot section.</td>
         </tr>
     </tbody>
 </table>
