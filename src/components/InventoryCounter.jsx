@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { BsPlus, BsDash } from 'react-icons/bs';
 
@@ -15,13 +14,11 @@ InventoryButton.propTypes = {
     children: PropTypes.object.isRequired
 };
 
-const InventoryCounter = ({price, inventory}) => {
-    const [count, setCount] = useState(inventory);
-
-    const plusHandler = () => setCount(count + 1),
-        subHandler = () => count > 0 
-            ? setCount(count - 1)
-            : setCount(0);
+const InventoryCounter = ({price, inventory, inventoryHandler}) => {
+    const plusHandler = () => inventoryHandler(inventory + 1),
+        subHandler = () => inventory > 0 
+            ? inventoryHandler(inventory - 1)
+            : inventoryHandler(0);
 
     return (
         <div className='inventory-counter d-flex column-gap'>
@@ -29,7 +26,7 @@ const InventoryCounter = ({price, inventory}) => {
             <InventoryButton className="btn-sub ripple" clickHandler={subHandler}>
                 <BsDash />
             </InventoryButton>
-            <h2>{count}</h2>
+            <h2>{inventory}</h2>
             <InventoryButton className="btn-plus ripple" clickHandler={plusHandler}>
                 <BsPlus />
             </InventoryButton>
@@ -38,7 +35,8 @@ const InventoryCounter = ({price, inventory}) => {
 };
 InventoryCounter.propTypes = {
     price: PropTypes.number.isRequired,
-    inventory: PropTypes.number.isRequired
+    inventory: PropTypes.number.isRequired,
+    inventoryHandler: PropTypes.func.isRequired
 };
 
 export default InventoryCounter;

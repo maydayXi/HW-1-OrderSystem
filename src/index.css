@@ -204,7 +204,6 @@ button svg {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 2px solid #000;
   z-index: 20;
   border-radius: 1rem;
   width: 50%;
@@ -267,6 +266,12 @@ button svg {
   background-color: var(--color-main);
   color: var(--color-white);
   border: none;
+}
+
+.settings-modal .modal-buttons .btn-save:disabled {
+  cursor: not-allowed;
+  background-color: var(--color-bg);
+  box-shadow: none;
 }
 
 .settings-modal .modal-buttons .btn-return {

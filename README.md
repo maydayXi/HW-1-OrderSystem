@@ -82,5 +82,13 @@
             <td>V 0.1.4</td>
             <td>Update Settings Modal style</td>
         </tr>
+        <tr>
+            <td rowspan="2" style="text-align: center; font-weight: bolder;">2023-08-14</td>
+            <td rowspan="2" style="font-weight: bolder;">V 0.2.0</td>
+            <td>New Feature：Can update product information.</td>
+        </tr>
+        <tr>
+            <td>Update settings modal style.</td>
+        </tr>
     </tbody>
 </table>
