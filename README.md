@@ -85,7 +85,7 @@
         <tr>
             <td rowspan="2" style="text-align: center; font-weight: bolder;">2023-08-14</td>
             <td rowspan="2" style="font-weight: bolder;">V 0.2.0</td>
-            <td>New Feature：Can update product information.</td>
+            <td>New Feature：Can update product information. Level 2 and Level 3 finished.</td>
         </tr>
         <tr>
             <td>Update settings modal style.</td>
