@@ -12,6 +12,8 @@
 
 <img src="https://i.imgur.com/d9Ji4AB.png" width="80%" alt="settings modal">
 
+<img src="https://i.imgur.com/gBjgIbj.png>" width="80%" alt="settings validation">
+
 ## History 
 <table>
     <thead>
@@ -100,9 +102,13 @@
             <td>Add screenshot section.</td>
         </tr>
         <tr>
+            <td rowspan="2">2023-08-17</td>
             <td>V 0.3.0</td>
-            <td>2023-08-17</td>
             <td>New Feature：Add validation to input.</td>
+        </tr>
+        <tr>
+            <td>V 0.3.1</td>
+            <td>Add validation screenshot</td>
         </tr>
     </tbody>
 </table>
