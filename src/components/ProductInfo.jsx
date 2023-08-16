@@ -12,27 +12,26 @@ const ProductInfo = ({name, description, price, inventory}) => {
         [_inventory, setInventory] = useState(inventory);
 
     const modalProps = {
-        isOpen,
         name: _name,
         description: _description,
         price: _price,
         inventory: _inventory,
-        openHandler: open => setIsOpen(open), 
-        nameHandler: productName => setName(productName),
-        descriptionHandler: productDescription => setDescription(productDescription),
-        priceHandler: productPrice => setPrice(productPrice),
-        inventoryHandler: productInventory => setInventory(productInventory)
+        handleOpen: open => setIsOpen(open), 
+        handleName: productName => setName(productName),
+        handleDescription: productDescription => setDescription(productDescription),
+        handlePrice: productPrice => setPrice(productPrice),
+        handleInventory: productInventory => setInventory(productInventory)
     };
 
     const counterProps = {
         price: _price,
         inventory: _inventory,
-        inventoryHandler: productInventory => setInventory(productInventory)
+        handleInventory: productInventory => setInventory(productInventory)
     };
 
     return (
         <>
-            <SettingsModal {...modalProps} />
+            { isOpen ? <SettingsModal {...modalProps} /> : null}
             <div className='product-info d-flex flex-column'>
                 <button className='btn-settings ripple' onClick={() => setIsOpen(true)}>
                     <BsThreeDotsVertical />

@@ -99,5 +99,10 @@
             <td>V 0.2.1</td>
             <td>Add screenshot section.</td>
         </tr>
+        <tr>
+            <td>V 0.3.0</td>
+            <td>2023-08-17</td>
+            <td>New Feature：Add validation to input.</td>
+        </tr>
     </tbody>
 </table>

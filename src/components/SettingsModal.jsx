@@ -1,3 +1,6 @@
+/* eslint-disable react/prop-types */
+import { useEffect } from 'react';
+import { useMemo } from 'react';
 import { useState } from 'react';
 import { 
     BsCupStraw, 
@@ -37,43 +40,67 @@ const inputProps = [
 
 const InputGroup = (props) => {
     // DOM id, label icon, label text, input type, input default value
-    const { id, icon, text, type, defaultValue, ...handlers } = { ...props };
-    // Handlers callback from parent component
-    const { disabledHandler, nameHandler, descriptionHandler, priceHandler, inventoryHandler } = { ...handlers };
+    const { id, icon, text, type, defaultValue, i, handleErrors, handleNewValue } = props;
 
     // input state
-    const [value, setValue] = useState(defaultValue);
+    const [ value, setValue ] = useState(defaultValue);
+    const [ valid, setValid ] = useState(true);
+    const [ errorMsg, setErrorMsg ] = useState("");
 
-    const valueHandler = e => {
+    useEffect(() => {
+        setValid(!errorMsg);
+        handleErrors(errs => {
+            errs[i] = errorMsg;
+            return errs;
+        });
+    }, [errorMsg]);
+
+    const handleChange = e => {
         const input = e.target.value.trim();
         switch(id) {
             case "productName": 
-                nameHandler(input); 
+                setErrorMsg(!input ? "品項必填" : "");
                 break;
             case "productDesc": 
-                descriptionHandler(input); 
+                setErrorMsg(!input ? "描述必填" : "");
                 break;
             case "productPrice":
-                priceHandler(input);
+                setErrorMsg(!input 
+                    ? "價格需是數字" 
+                    : Number(input) < 30
+                        ? "價格需 >= 30"
+                        : "");
                 break;
-            default:
-                inventoryHandler(input);
+            case "productInventory":
+                setErrorMsg(!input 
+                    ? "庫存需是數字" 
+                    : Number(input) < 0
+                        ? "庫存數量需 >= 0"
+                        : "");
                 break;
         }
+        handleNewValue(input);
         setValue(input);
-        disabledHandler(false);
     };
 
     const inputProps = {
         id, 
         type,
         value,
-        onChange: valueHandler,
+        onChange: handleChange,
         min: type === "number" 
             ? id === "productPrice"
                 ? 30 : 0
             : null,
-        required: true
+        required: true,
+        className: valid ? null: "input-invalid"
+    };
+
+    const invalidTextStyle = {
+        marginTop: "4px",
+        color: "#de3545",
+        fontWeight: "bolder",
+        letterSpacing: "1px"
     };
 
     return (
@@ -82,42 +109,50 @@ const InputGroup = (props) => {
                 <div className='modal-group-icon d-flex'>{icon}</div><span>{text}</span>
             </label>
             <input {...inputProps} />
+            { valid
+                ? null
+                : (<div style={invalidTextStyle}>
+                    {errorMsg}
+                </div>) }
         </div>
     )
 };
 
 const SettingsModal = (props) => {
     // spread default value
-    const { name, description, price, inventory, ...handlers } = { ...props };
+    const { name, description, price, inventory, ...handles } = props;
     // spread handler from parent component
-    const { isOpen, openHandler, nameHandler, descriptionHandler, priceHandler, inventoryHandler } = { ...handlers };
+    const { handleOpen, handleName, handleDescription, handlePrice, handleInventory } = handles;
     // default value for modal input
     const defaultValues = [name, description, price, inventory];
 
     // Modal states
     const [ disabled, setDisabled ] = useState(true);
+    const [ errors, setErrors ] = useState(["", "", "", ""]);
     const [ newName, setNewName ] = useState(name);
     const [ newDescription, setNewDescription ] = useState(description);
     const [ newPrice, setNewPrice ] = useState(price);
     const [ newInventory, setNewInventory ] = useState(inventory);
 
-    const returnHandler = () => openHandler(false);
+    const setNewStates = [setNewName, setNewDescription, setNewPrice, setNewInventory];
+    const hasError = Boolean(errors.filter(error => Boolean(error)).length);
 
-    const saveHandler = () => {
-        if ([newName, newDescription].filter(newInput => newInput.trim() === "").length === 0) {
-            console.log("new inventory", newInventory);
-            nameHandler(newName);
-            descriptionHandler(newDescription);
-            priceHandler(Number(newPrice))
-            inventoryHandler(Number(newInventory));
-            openHandler(false);
-        }
+    useMemo(() => {
+        setDisabled(hasError);
+    }, [hasError])
 
+    const handleReturn = () => handleOpen(false);
+
+    const handleSave = () => {
+        handleName(newName);
+        handleDescription(newDescription);
+        handlePrice(Number(newPrice))
+        handleInventory(Number(newInventory));
+        handleOpen(false);
         setDisabled(true);
-    }
+    };
 
-    return isOpen 
-        ?  (
+    return (
             <div className='overlay'>
                 <div className='settings-modal d-flex flex-column row-gap'>
                     <h1>SETTINGS</h1>
@@ -125,29 +160,26 @@ const SettingsModal = (props) => {
                         {inputProps.map((inputProps, i) => {
                             const props = {
                                 ...inputProps,
+                                i,
                                 defaultValue: defaultValues[i],
-                                disabledHandler: enable => setDisabled(enable),
-                                nameHandler: _newName => setNewName(_newName),
-                                descriptionHandler: _newDescription => setNewDescription(_newDescription),
-                                priceHandler: _newPrice => setNewPrice(_newPrice),
-                                inventoryHandler: _newInventory => setNewInventory(_newInventory)
+                                handleErrors: handleError => setErrors(handleError),
+                                handleNewValue: newValue => setNewStates[i](newValue)
                             };
 
                             return (<InputGroup key={inputProps.id} {...props} />);
                         })}
                     </div>
                     <div className='modal-buttons d-flex column-gap'>
-                        <button className='btn-return' onClick={returnHandler}>
+                        <button className='btn-return' onClick={handleReturn}>
                             <BsArrowLeft />
                         </button>
-                        <button className='btn-save' onClick={saveHandler} disabled={disabled}>
+                        <button className='btn-save' onClick={handleSave} disabled={disabled}>
                             <BsCheckLg />
                         </button>
                     </div>
                 </div>
             </div>
-        )
-        : null;
+        );
 };
 
 export default SettingsModal;

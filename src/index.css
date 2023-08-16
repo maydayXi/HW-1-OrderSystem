@@ -1,6 +1,7 @@
 :root {
   /* color */
   --color-white: #fff;
+  --color-invalid: #de3545;
   --color-bg: #eaf2fb;
   --color-desc: #6c757d;
   --color-main: #f77539;
@@ -14,10 +15,12 @@
   --color-input-border: #dee2e6;
   --rgba-shadow-sm: 0, 0, 0, .75;
   --rgba-overlay: 0, 0, 0, .5;
+  --rgba-input-invalid: 220, 53, 69, .25;
 
   /* size */
   --shadow-sm: 0 .125rem .25rem;
   --input-padding: .375rem .75rem;
+  --input-focus: 0 0 0 .25rem;
 }
 
 * {
@@ -243,7 +246,13 @@ button svg {
 
 .settings-modal input:focus {
   outline: 0;
-  box-shadow: 0 0 0 .25rem var(--color-main-active);
+  box-shadow: var(--input-focus) var(--color-main-active);
+}
+
+.settings-modal input.input-invalid,
+.settings-modal input.input-invalid:focus {
+  border: 1px solid var(--color-invalid) !important;
+  box-shadow: var(--input-focus) rgba(var(--rgba-input-invalid)) !important;
 }
 
 .settings-modal input:focus-visible {

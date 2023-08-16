@@ -14,11 +14,11 @@ InventoryButton.propTypes = {
     children: PropTypes.object.isRequired
 };
 
-const InventoryCounter = ({price, inventory, inventoryHandler}) => {
-    const plusHandler = () => inventoryHandler(inventory + 1),
+const InventoryCounter = ({price, inventory, handleInventory}) => {
+    const plusHandler = () => handleInventory(inventory + 1),
         subHandler = () => inventory > 0 
-            ? inventoryHandler(inventory - 1)
-            : inventoryHandler(0);
+            ? handleInventory(inventory - 1)
+            : handleInventory(0);
 
     return (
         <div className='inventory-counter d-flex column-gap'>
@@ -36,7 +36,7 @@ const InventoryCounter = ({price, inventory, inventoryHandler}) => {
 InventoryCounter.propTypes = {
     price: PropTypes.number.isRequired,
     inventory: PropTypes.number.isRequired,
-    inventoryHandler: PropTypes.func.isRequired
+    handleInventory: PropTypes.func.isRequired
 };
 
 export default InventoryCounter;
