@@ -102,9 +102,12 @@
             <td>Add screenshot section.</td>
         </tr>
         <tr>
-            <td rowspan="2">2023-08-17</td>
-            <td>V 0.3.0</td>
+            <td rowspan="3">2023-08-17</td>
+            <td rowspan="2">V 0.3.0</td>
             <td>New Feature：Add validation to input.</td>
+        </tr>
+        <tr>
+            <td>Modify handle function name.</td>
         </tr>
         <tr>
             <td>V 0.3.1</td>
