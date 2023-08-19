@@ -123,7 +123,7 @@
             <td>Refactoring App：add useContext hook.</td>
         </tr>
         <tr>
-            <td rowspan="2">V 3.0.4</td>
+            <td rowspan="2">V 0.3.4</td>
             <td>Refactoring App：Add InventoryProvider.jsx</td>
         </tr>
         <tr>
