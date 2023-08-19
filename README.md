@@ -114,9 +114,13 @@
             <td>Add validation screenshot</td>
         </tr>
         <tr>
-            <td>2023-08-19</td>
+            <td rowspan="2">2023-08-19</td>
             <td>V 0.3.2</td>
             <td>Add logo.svg and update favicon</td>
+        </tr>
+        <tr>
+            <td>V 0.3.3</td>
+            <td>Refactoring App：add useContext hook.</td>
         </tr>
     </tbody>
 </table>
