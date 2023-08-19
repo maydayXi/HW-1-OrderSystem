@@ -113,5 +113,10 @@
             <td>V 0.3.1</td>
             <td>Add validation screenshot</td>
         </tr>
+        <tr>
+            <td>2023-08-19</td>
+            <td>V 0.3.2</td>
+            <td>Add logo.svg and update favicon</td>
+        </tr>
     </tbody>
 </table>
