@@ -1,11 +1,19 @@
-import { useState } from 'react';
-import PropTypes from 'prop-types';
-import InventoryCounter from "./InventoryCounter";
+import { useState, useContext } from 'react';
 import { BsThreeDotsVertical } from 'react-icons/bs';
+import { InventoryContext } from './InventoryProvider';
 import SettingsModal from './SettingsModal';
+import InventoryCounter from "./InventoryCounter";
+import PropTypes from 'prop-types';
 
-const ProductInfo = ({name, description, price, inventory}) => {
-    const [isOpen, setIsOpen] = useState(false),
+const ProductInfo = ({id}) => {
+    // Get all products data.
+    const { products } = useContext(InventoryContext);
+    // Get current product by id.
+    const [ product ] = products.filter(_product => _product.id === id);
+    // deconstruct product object.
+    const { name, description, price, inventory } = product;
+
+    const [ open, setOpen ] = useState(false),
         [_name, setName] = useState(name),
         [_description, setDescription] = useState(description),
         [_price, setPrice] = useState(price),
@@ -16,40 +24,33 @@ const ProductInfo = ({name, description, price, inventory}) => {
         description: _description,
         price: _price,
         inventory: _inventory,
-        handleOpen: open => setIsOpen(open), 
+        handleOpen: open => setOpen(open), 
         handleName: productName => setName(productName),
         handleDescription: productDescription => setDescription(productDescription),
         handlePrice: productPrice => setPrice(productPrice),
         handleInventory: productInventory => setInventory(productInventory)
     };
 
-    const counterProps = {
-        price: _price,
-        inventory: _inventory,
-        handleInventory: productInventory => setInventory(productInventory)
-    };
+    const handleOpen = () => setOpen(true);
 
     return (
         <>
-            { isOpen ? <SettingsModal {...modalProps} /> : null}
+            { open ? <SettingsModal {...modalProps} id={id} /> : null}
             <div className='product-info d-flex flex-column'>
-                <button className='btn-settings ripple' onClick={() => setIsOpen(true)}>
+                <button className='btn-settings ripple' onClick={handleOpen}>
                     <BsThreeDotsVertical />
                 </button>
                 <div className='d-flex flex-column'>
-                    <h2 className='product-name'>{_name}</h2>
-                    <p className='product-description'>{_description}</p>
+                    <h2 className='product-name'>{name}</h2>
+                    <p className='product-description'>{description}</p>
                 </div>
-                <InventoryCounter {...counterProps} />
+                <InventoryCounter id={id} />
             </div>
         </>
     );
 };
 ProductInfo.propTypes = {
-    name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-    inventory: PropTypes.number.isRequired
+    id: PropTypes.number.isRequired
 };
 
 export default ProductInfo;

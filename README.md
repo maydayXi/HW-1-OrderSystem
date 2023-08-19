@@ -114,7 +114,7 @@
             <td>Add validation screenshot</td>
         </tr>
         <tr>
-            <td rowspan="2">2023-08-19</td>
+            <td rowspan="4">2023-08-19</td>
             <td>V 0.3.2</td>
             <td>Add logo.svg and update favicon</td>
         </tr>
@@ -122,5 +122,12 @@
             <td>V 0.3.3</td>
             <td>Refactoring App：add useContext hook.</td>
         </tr>
+        <tr>
+            <td rowspan="2">V 3.0.4</td>
+            <td>Refactoring App：Add InventoryProvider.jsx</td>
+        </tr>
+        <tr>
+            <td>Refactoring App：ProductCard.jsx, ProductInfo.jsx, InventoryCounter.jsx</td>
+        </td>
     </tbody>
 </table>
