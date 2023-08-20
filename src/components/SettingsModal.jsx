@@ -153,30 +153,30 @@ const SettingsModal = ({productId, handleOpen}) => {
     };
 
     return (
-            <div className='overlay'>
-                <div className='settings-modal d-flex flex-column row-gap'>
-                    <h1>SETTINGS</h1>
-                    <div className='d-flex flex-column row-gap'>
-                        {inputProps.map((inputProp, i) => {
-                            const props = {
-                                productId,
-                                i,
-                                handleNewProduct: handleSet => setNewProduct(handleSet)
-                            };
-                            return (<InputGroup key={inputProp.id} {...props} />);
-                        })}
-                    </div>
-                    <div className='modal-buttons d-flex column-gap'>
-                        <button className='btn-return' onClick={handleReturn}>
-                            <BsArrowLeft />
-                        </button>
-                        <button className='btn-save' onClick={handleSave} disabled={disabled}>
-                            <BsCheckLg />
-                        </button>
-                    </div>
+        <div className='overlay'>
+            <div className='settings-modal d-flex flex-column row-gap'>
+                <h1>SETTINGS</h1>
+                <div className='d-flex flex-column row-gap'>
+                    {inputProps.map((inputProp, i) => {
+                        const props = {
+                            productId,
+                            i,
+                            handleNewProduct: handleSet => setNewProduct(handleSet)
+                        };
+                        return (<InputGroup key={inputProp.id} {...props} />);
+                    })}
+                </div>
+                <div className='modal-buttons d-flex column-gap'>
+                    <button className='btn-return' onClick={handleReturn}>
+                        <BsArrowLeft />
+                    </button>
+                    <button className='btn-save' onClick={handleSave} disabled={disabled}>
+                        <BsCheckLg />
+                    </button>
                 </div>
             </div>
-        );
+        </div>
+    );
 };
 
 export default SettingsModal;

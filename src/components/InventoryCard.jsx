@@ -2,9 +2,9 @@ import { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { InventoryContext } from './InventoryProvider';
 import ProductImage from './ProductImage';
-import ProductInfo from './ProductInfo';
+import InventoryInfo from './InventoryInfo';
 
-const ProductCard = ({productId}) => {
+const InventoryCard = ({productId}) => {
     // Get products data.
     const { products } = useContext(InventoryContext);
     // Get current product.
@@ -13,14 +13,14 @@ const ProductCard = ({productId}) => {
     const { image } = product;
 
     return (
-        <div className='product-card d-flex column-gap'>
+        <div className='inventory-card d-flex column-gap'>
             <ProductImage image={image} />
-            <ProductInfo productId={productId} />
+            <InventoryInfo productId={productId} />
         </div>
     );
 };
-ProductCard.propTypes = {
+InventoryCard.propTypes = {
     productId: PropTypes.string.isRequired
 };
 
-export default ProductCard;
+export default InventoryCard;

@@ -83,8 +83,8 @@ button svg {
   overflow: hidden;
 }
 
-/* #region ProductCard */
-.product-card {
+/* #region Inventory card */
+.inventory-card {
   background-color: var(--color-white);
   padding: 1rem;
   border-radius: 1rem;
@@ -98,46 +98,6 @@ button svg {
   flex: 1;
   min-width: 200px;
   height: 200px;
-}
-/* #endregion */
-
-/* #region Product-info */
-.product-info {
-  justify-content: space-between;
-  flex: 3;
-}
-
-.product-name {
-  letter-spacing: 4px;
-}
-
-.product-description {
-  letter-spacing: 2px;
-  color: var(--color-desc);
-}
-
-.product-name, .product-description {
-  margin-top: 0;
-}
-
-.btn-settings {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: 10;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-}
-
-.btn-settings.ripple:hover {
-  background: var(--color-settings-hover) radial-gradient(circle, transparent 1%, var(--color-settings-hover) 1%) center/15000%;
-}
-
-.btn-settings.ripple:active {
-  background-color: var(--color-settings-active);
 }
 /* #endregion */
 
