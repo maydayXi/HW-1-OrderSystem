@@ -10,21 +10,25 @@ const InventoryProvider = ({children}) => {
     // Context products data state.
     const [ products, setProducts ] = useState(data.products);
 
-    // Handle product data update.
-    const updateProduct = (id, newProduct) => {
-        // deconstruct product property without id. (id is read-only).
-        const { name, description, price, inventory } = newProduct;
-        
+    /**
+     * Handle product update
+     * @param {string} productId Product Id
+     * @param {object} newProduct New Product object
+     * @returns {null} null
+     */
+    const updateProduct = (productId, newProduct) => {
         // Update product by id.
-        setProducts(products.map(_product => 
-            _product.id === id 
-                ? { ..._product, name, description, price, inventory } 
-                : _product 
+        setProducts(products.map(oldProduct => 
+            oldProduct.productId === productId 
+                ? newProduct
+                : oldProduct
             )
         );
     };
 
-    // Inventory context value.
+    /**
+     * Inventory context value.
+     */
     const value = {
         products,
         updateProduct

@@ -4,23 +4,23 @@ import { InventoryContext } from './InventoryProvider';
 import ProductImage from './ProductImage';
 import ProductInfo from './ProductInfo';
 
-const ProductCard = ({id}) => {
+const ProductCard = ({productId}) => {
     // Get products data.
     const { products } = useContext(InventoryContext);
     // Get current product.
-    const [ product ] = products.filter(_product => _product.id == id);
+    const [ product ] = products.filter(_product => _product.productId == productId);
     // deconstruct product image.
     const { image } = product;
 
     return (
         <div className='product-card d-flex column-gap'>
             <ProductImage image={image} />
-            <ProductInfo id={id} />
+            <ProductInfo productId={productId} />
         </div>
     );
 };
 ProductCard.propTypes = {
-    id: PropTypes.number.isRequired
+    productId: PropTypes.string.isRequired
 };
 
 export default ProductCard;

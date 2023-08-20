@@ -16,23 +16,29 @@ InventoryButton.propTypes = {
     children: PropTypes.object.isRequired
 };
 
-const InventoryCounter = ({id}) => {
+const InventoryCounter = ({productId}) => {
     // Get products data and update function.
     const { products, updateProduct } = useContext(InventoryContext);
     // Get current product data.
-    const [ product ] = products.filter(_product => _product.id === id);
+    const [ product ] = products.filter(_product => _product.productId === productId);
     // Deconstruct product price and name.
     const { price, inventory } = product;
 
+    /**
+     * Handle increase inventory
+     */
     const handlePlus = () => {
-        updateProduct(id, {
+        updateProduct(productId, {
             ...product,
             inventory: inventory + 1
         });
     };
 
+    /**
+     * Handle reduce inventory
+     */
     const handleSub = () => {
-        updateProduct(id, {
+        updateProduct(productId, {
             ...product,
             inventory: inventory - 1 > 0 ? inventory - 1 : 0
         });
@@ -52,7 +58,7 @@ const InventoryCounter = ({id}) => {
     );
 };
 InventoryCounter.propTypes = {
-    id: PropTypes.number.isRequired
+    productId: PropTypes.string.isRequired
 };
 
 export default InventoryCounter;

@@ -9,8 +9,8 @@ function App() {
     <div className='d-flex flex-column row-gap'>
       <InventoryProvider>
         {data.products.map(product => {
-          const { id } = product;
-          return (<ProductCard key={id} id={id} />);
+          const { productId } = product;
+          return (<ProductCard key={productId} productId={productId} />);
         })}
       </InventoryProvider>
     </div>

@@ -127,7 +127,15 @@
             <td>Refactoring App：Add InventoryProvider.jsx</td>
         </tr>
         <tr>
-            <td>Refactoring App：ProductCard.jsx, ProductInfo.jsx, InventoryCounter.jsx</td>
+            <td>Refactoring Component：ProductCard.jsx, ProductInfo.jsx, InventoryCounter.jsx</td>
         </td>
+        <tr>
+            <td rowspan="2">2023-08-20</td>
+            <td rowspan="2">V 0.3.5</td>
+            <td>Refactoring Component：SettingModal.jsx</td>
+        </tr>
+        <tr>
+            <td>Update products.json：Change id => productId, name => productName</td>
+        </tr>
     </tbody>
 </table>
