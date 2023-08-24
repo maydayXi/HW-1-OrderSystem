@@ -130,7 +130,7 @@
             <td>Refactoring Component：ProductCard.jsx, ProductInfo.jsx, InventoryCounter.jsx</td>
         </td>
         <tr>
-            <td rowspan="3">2023-08-20</td>
+            <td rowspan="4">2023-08-20</td>
             <td rowspan="2">V 0.3.5</td>
             <td>Refactoring Component：SettingModal.jsx</td>
         </tr>
