@@ -1,23 +1,30 @@
+#inventoryManage {
+    width: 80%;
+    min-width: 380px;
+    margin: 0 auto;
+}
+
 /* #region Inventory info */
-.inventory-info {
+#inventoryManage .inventory-info {
     justify-content: space-between;
     flex: 3;
 }
 
-.inventory-name {
+#inventoryManage .inventory-name {
     letter-spacing: 4px;
 }
 
-.inventory-description {
+#inventoryManage.inventory-description {
     letter-spacing: 2px;
     color: var(--color-desc);
 }
 
-.inventory-name, .inventory-description {
+#inventoryManage .inventory-name, 
+#inventoryManage .inventory-description {
     margin-top: 0;
 }
 
-.btn-settings {
+#inventoryManage .btn-settings {
     position: absolute;
     top: 0;
     right: 0;
@@ -29,11 +36,11 @@
     border-radius: 8px;
 }
 
-.btn-settings.ripple:hover {
-background: var(--color-settings-hover) radial-gradient(circle, transparent 1%, var(--color-settings-hover) 1%) center/15000%;
+#inventoryManage .btn-settings.ripple:hover {
+    background: var(--color-settings-hover) radial-gradient(circle, transparent 1%, var(--color-settings-hover) 1%) center/15000%;
 }
 
-.btn-settings.ripple:active {
-background-color: var(--color-settings-active);
+#inventoryManage .btn-settings.ripple:active {
+    background-color: var(--color-settings-active);
 }
 /* #endregion */

@@ -1,0 +1,30 @@
+#appNav {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-regular) rgba(var(--rgba-shadow-regular));
+}
+
+#appNav .app-logo {
+    align-items: center;
+    cursor: pointer;
+}
+
+#appNav .app-logo h1 {
+    margin: 0;
+    letter-spacing: 4px;
+}
+
+#appNav .app-user {
+    padding-right: 1rem;
+    align-items: center;
+}
+
+#appNav .app-user img {
+    border-radius: 50%;
+    border: 3px solid var(--color-main);
+    overflow: hidden;
+}

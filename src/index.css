@@ -3,6 +3,7 @@
   --color-white: #fff;
   --color-invalid: #de3545;
   --color-bg: #eaf2fb;
+  --color-nav-bg: #f3f2f2;
   --color-desc: #6c757d;
   --color-main: #f77539;
   --color-main-hover: #f99e74;
@@ -14,11 +15,13 @@
   --color-modal-text: #242326;
   --color-input-border: #dee2e6;
   --rgba-shadow-sm: 0, 0, 0, .75;
+  --rgba-shadow-regular: 0, 0, 0, .15;
   --rgba-overlay: 0, 0, 0, .5;
   --rgba-input-invalid: 220, 53, 69, .25;
 
   /* size */
   --shadow-sm: 0 .125rem .25rem;
+  --shadow-regular: 0 .5rem 1rem;
   --input-padding: .375rem .75rem;
   --input-focus: 0 0 0 .25rem;
 }
@@ -49,9 +52,8 @@ button svg {
 }
 
 #root {
-  padding: 2rem;
-  width: 80%;
-  min-width: 380px;
+  width: 100%;
+  padding-bottom: 2rem;
 }
 
 .d-flex {
