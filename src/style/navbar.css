@@ -6,11 +6,13 @@
     justify-content: space-between;
     background-color: var(--color-white);
     box-shadow: var(--shadow-regular) rgba(var(--rgba-shadow-regular));
+    z-index: 10;
 }
 
 #appNav .app-logo {
     align-items: center;
     cursor: pointer;
+    user-select: none;
 }
 
 #appNav .app-logo h1 {

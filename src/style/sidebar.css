@@ -1,0 +1,33 @@
+#sidebar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--color-white);
+    transition: all .5s;
+    z-index: 5;
+    padding: 0 1rem;
+    padding-top: calc(48px + 3rem);
+    overflow-x: hidden;
+    width: calc(3.5rem + 20px) !important;
+    box-shadow: var(--shadow-regular) rgba(var(--rgba-shadow-regular));
+}
+
+#sidebar.open {
+    width: calc(130px + 4rem) !important;
+}
+
+#sidebar .sidebar-item {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    align-items: center;
+}
+
+#sidebar .sidebar-item svg {
+    min-width: 20px;
+}
+
+#sidebar .sidebar-item .sidebar-text {
+    white-space: nowrap;
+    padding-left: 0.5rem;
+}
