@@ -16,7 +16,7 @@ const InventoryInfo = ({productId}) => {
     // Modal open state
     const [ open, setOpen ] = useState(false);
     // Open handle event.
-    const handleOpen = () =>  (true);
+    const handleOpen = () => setOpen(true);
     const toggleOpen = isOpen => setOpen(isOpen);
 
     return (
