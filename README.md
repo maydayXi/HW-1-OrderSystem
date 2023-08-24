@@ -145,7 +145,7 @@
             <td>Add inventory stylesheet：Extract inventory style to inventory stylesheet</td>
         </tr>
         <tr>
-            <td rowspan="4">2023-08-25</td>
+            <td rowspan="5">2023-08-25</td>
             <td rowspan="2">V 0.3.7</td>
             <td>Add Navbar：Navbar.jsx, navbar.css and icons</td>
         </tr>
@@ -157,8 +157,11 @@
             <td>fixed bug：open setting modal</td>
         </tr>
         <tr>
-            <td>V 0.3.9</td>
+            <td rowspan="2">V 0.4.0</td>
             <td>Add Sidebar：Sidebar.jsx, sidebar.css</td>
+        </tr>
+        <tr>
+            <td>Update Navbar style</td>
         </tr>
     </tbody>
 </table>

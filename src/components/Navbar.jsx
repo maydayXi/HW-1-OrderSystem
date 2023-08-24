@@ -6,11 +6,11 @@ import Sidebar from './Sidebar';
 import '../style/navbar.css'
 
 const Navbar = () => {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
 
     const bellStyle = {
-        transform: "scale(2)",
-        marginRight: "3rem"
+        transform: "scale(1.5)",
+        marginRight: "2.5rem"
     };
 
     const toggleSidebar = () => {
@@ -26,7 +26,7 @@ const Navbar = () => {
                 </div>
                 <div className="app-user d-flex">
                     <BsBell style={bellStyle} />
-                    <img src={User} width={48} height={48} alt="user" />
+                    <img src={User} width={32} height={32} alt="user" />
                 </div>
             </nav>
             <Sidebar open={open} />
