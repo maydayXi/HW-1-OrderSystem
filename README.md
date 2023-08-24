@@ -145,9 +145,12 @@
             <td>Add inventory stylesheet：Extract inventory style to inventory stylesheet</td>
         </tr>
         <tr>
-            <td>2023-08-25</td>
-            <td>V 0.3.7</td>
+            <td rowspan="2">2023-08-25</td>
+            <td rowspan="2">V 0.3.7</td>
             <td>Add Navbar：Navbar.jsx, navbar.css and icons</td>
+        </tr>
+        <tr>
+            <td>Add react-router</td>
         </tr>
     </tbody>
 </table>
