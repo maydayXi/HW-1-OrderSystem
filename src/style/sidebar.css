@@ -25,6 +25,12 @@
     color: var(--color-text);
 }
 
+#sidebar .sidebar-item.active {
+    color: var(--color-main);
+    border: 2px solid var(--color-main);
+    border-radius: 8px;
+}
+
 #sidebar .sidebar-item svg {
     min-width: 20px;
 }

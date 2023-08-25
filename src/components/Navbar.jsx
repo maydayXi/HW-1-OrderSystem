@@ -13,9 +13,7 @@ const Navbar = () => {
         marginRight: "2.5rem"
     };
 
-    const toggleSidebar = () => {
-        setOpen(!open);
-    }
+    const toggleSidebar = () => setOpen(!open);
 
     return (
         <>
