@@ -145,7 +145,7 @@
             <td>Add inventory stylesheet：Extract inventory style to inventory stylesheet</td>
         </tr>
         <tr>
-            <td rowspan="5">2023-08-25</td>
+            <td rowspan="7">2023-08-25</td>
             <td rowspan="2">V 0.3.7</td>
             <td>Add Navbar：Navbar.jsx, navbar.css and icons</td>
         </tr>
@@ -162,6 +162,13 @@
         </tr>
         <tr>
             <td>Update Navbar style</td>
+        </tr>
+        <tr>
+            <td rowspan="2">V 0.4.1</td>
+            <td>Add Error Page：ErrorPage.jsx</td>
+        </tr>
+        <tr>
+            <td>Add Inventory Page</td>
         </tr>
     </tbody>
 </table>

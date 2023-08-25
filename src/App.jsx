@@ -1,22 +1,23 @@
-import InventoryCard from './components/InventoryCard';
-import InventoryProvider from './components/InventoryProvider';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import data from './data/products.json'
+import ErrorPage from './pages/ErrorPage';
+import Inventory from './pages/Inventory';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Navbar><ErrorPage /></Navbar>,
+    errorElement: <Navbar><ErrorPage /></Navbar>
+  },
+  {
+    path: "/inventory",
+    element: <><Navbar /><Inventory /></>,
+    errorElement: <Navbar><ErrorPage /></Navbar>
+  }
+])
 
 function App() {
-  return (
-    <>
-      <Navbar />
-      <div id='inventoryManage' className='d-flex flex-column row-gap'>
-        <InventoryProvider>
-          {data.products.map(product => {
-            const { productId } = product;
-            return (<InventoryCard key={productId} productId={productId} />);
-          })}
-        </InventoryProvider>
-      </div>
-    </>
-  );
+  return (<RouterProvider router={router} />);
 }
 
 export default App

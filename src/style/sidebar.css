@@ -14,13 +14,15 @@
 }
 
 #sidebar.open {
-    width: calc(130px + 4rem) !important;
+    width: calc(130px + 5rem) !important;
 }
 
 #sidebar .sidebar-item {
     padding: 0.5rem 1rem;
     font-size: 1.25rem;
     align-items: center;
+    text-decoration: none;
+    color: var(--color-text);
 }
 
 #sidebar .sidebar-item svg {
