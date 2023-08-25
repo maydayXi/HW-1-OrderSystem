@@ -21,7 +21,9 @@ const router = createBrowserRouter([
     element: <><Navbar /><Order /></>,
     errorElement: <><Navbar /><ErrorPage /></>
   }
-])
+], {
+  basename: process.env.NODE_ENV === "production" ? "/HW-1-OrderSystem/" : "/"
+})
 
 function App() {
   return (<RouterProvider router={router} />);
