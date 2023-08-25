@@ -1,10 +1,15 @@
 import { BsListCheck } from 'react-icons/bs';
-import { FaWarehouse } from 'react-icons/fa';
+import { FaWarehouse, FaHome } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import { Link, useLocation } from 'react-router-dom';
 import '../style/sidebar.css'
 
 const sidebarItem = [
+    {
+        text: "首頁",
+        icon: <FaHome />,
+        href: "/"
+    },
     {
         text: "庫存管理",
         icon: <FaWarehouse />,
@@ -22,8 +27,9 @@ const Sidebar = ({open}) => {
         .concat(open ? " open" : "");
 
     const { pathname } = useLocation();
-    const href = pathname.split("/")[1];
-
+    // home page split will be empty, so append root path.
+    const href = pathname.split("/")[1] || "/";
+    
     return (
         <div id="sidebar" className={className}>
             {sidebarItem.map((item, i) => 

@@ -177,5 +177,13 @@
         <tr>
             <td>Add sidebar active style</td>
         </tr>
+        <tr>
+            <td rowspan="2">2023-08-26</td>
+            <td rowspan="2">V 0.4.3</td>
+            <td>Add Home page：Home.jsx, MenuCard.jsx menu.css</td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
     </tbody>
 </table>

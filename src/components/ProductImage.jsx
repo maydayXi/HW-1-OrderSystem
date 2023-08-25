@@ -10,7 +10,8 @@ const ProductImage = ({image}) => {
         background: `url("${image}")`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "75%"
+        backgroundSize: "75%",
+        minHeight: "150px"
     }
 
     return (

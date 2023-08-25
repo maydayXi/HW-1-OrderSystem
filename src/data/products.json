@@ -6,7 +6,8 @@
             "description": "香濃奶茶搭配QQ珍珠",
             "price": 50,
             "inventory": 20,
-            "image": "images/Bubble-Milk-Tea.png"
+            "image": "images/Bubble-Milk-Tea.png",
+            "rating": 4.7
         },
         {
             "productId": "2",
@@ -14,7 +15,8 @@
             "description": "清新冬瓜配上新鮮檸檬",
             "price": 45,
             "inventory": 15,
-            "image": "images/Winter-Melon-Lemon-Tea.jpg"
+            "image": "images/Winter-Melon-Lemon-Tea.jpg",
+            "rating": 3.8
         },
         {
             "productId": "3",
@@ -22,7 +24,8 @@
             "description": "綠茶與檸檬的完美結合",
             "price": 55,
             "inventory": 30,
-            "image": "images/Lemon-Premium-Green-Tea.jpg"
+            "image": "images/Lemon-Premium-Green-Tea.jpg",
+            "rating": 4.1
         },
         {
             "productId": "4",
@@ -30,7 +33,8 @@
             "description": "香醇四季春茶，回甘無比",
             "price": 45,
             "inventory": 10,
-            "image": "images/Four-Season-Green-Tea.jpg"
+            "image": "images/Four-Season-Green-Tea.jpg",
+            "rating": 4.3
         },
         {
             "productId": "5",
@@ -38,7 +42,8 @@
             "description": "阿薩姆紅茶搭配香醇鮮奶",
             "price": 50,
             "inventory": 25,
-            "image": "images/Assam-Milk-Tea.jpg"
+            "image": "images/Assam-Milk-Tea.jpg",
+            "rating": 4.0
         },
         {
             "productId": "6",
@@ -46,7 +51,8 @@
             "description": "檸檬與冰茶的清新組合",
             "price": 45,
             "inventory": 20,
-            "image": "images/Lemon-Iced-Tea.jpg"
+            "image": "images/Lemon-Iced-Tea.jpg",
+            "rating": 3.7
         },
         {
             "productId": "7",
@@ -54,7 +60,8 @@
             "description": "芒果與綠茶的獨特風味",
             "price": 55,
             "inventory": 18,
-            "image": "images/Mango-Green-Tea.jpg"
+            "image": "images/Mango-Green-Tea.jpg",
+            "rating": 4.0
         },
         {
             "productId": "8",
@@ -62,7 +69,8 @@
             "description": "抹茶與鮮奶的絕配",
             "price": 60,
             "inventory": 20,
-            "image": "images/Matcha-Latte.jpg"
+            "image": "images/Matcha-Latte.jpg",
+            "rating": 4.8
         }
     ]
 }
