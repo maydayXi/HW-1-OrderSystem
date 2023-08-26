@@ -20,12 +20,12 @@ const MenuCard = ({product}) => {
                 <div className="divide"></div>
                 <div>
                     <p>Size</p>
-                    L/M
+                    L / M
                 </div>
                 <div className="divide"></div>
                 <div>
                     <p>Type</p>
-                    H/I
+                    H / I
                 </div>
             </div>
         </div>

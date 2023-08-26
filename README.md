@@ -1,8 +1,17 @@
 # 作業 - 點餐管理系統
 
+## 第一週
+
 - **Level 1：將菜單轉為資料格式**
 - **Level 2：可以重新設定菜單的庫存數量**
 - **Level 3（挑戰）：可以重新設定品項名稱**
+
+## 第二週
+
+**餐點管理工具**
+- **Level 1：至少製作三個元件（可選擇：左側餐點列表單一品項、單一 、下方的訂單摘要），要會動**
+- **Level 2：製作菜單工具，可加入購物車並產出結果，一樣至少需做三個元件**
+- **Level 3：加入刪除、調整數量功能，重複品項數量會加 1、客製化版型**
 
 ## 範例
 [Sample Code](https://www.casper.tw/react-2023-homework/)
@@ -188,6 +197,17 @@
         <tr>
             <td>V 0.4.4</td>
             <td>Fix react router production path</td>
+        </tr>
+        <tr>
+            <td rowspan="3">2023-08-27</td>
+            <td rowspan="3">V 0.4.5</td>
+            <td>Add homework second week description.</td>
+        </tr>
+        <tr>
+            <td>New feature：Sidebar auto close when click item</td>
+        </tr>
+        <tr>
+            <td>Update MenuCard style</td>
         </tr>
     </tbody>
 </table>

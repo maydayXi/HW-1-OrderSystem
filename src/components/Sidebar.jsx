@@ -22,7 +22,7 @@ const sidebarItem = [
     }
 ]
 
-const Sidebar = ({open}) => {
+const Sidebar = ({open, handleClick}) => {
     const className = "d-flex flex-column row-gap"
         .concat(open ? " open" : "");
 
@@ -34,7 +34,8 @@ const Sidebar = ({open}) => {
         <div id="sidebar" className={className}>
             {sidebarItem.map((item, i) => 
                 (<Link key={i} to={item.href} className={"sidebar-item d-flex column-gap"
-                    .concat(item.href.endsWith(href) ? " active" : "")} >
+                    .concat(item.href.endsWith(href) ? " active" : "")} 
+                    onClick={handleClick} >
                     {item.icon}<span className='sidebar-text'>{item.text}</span>
                 </Link>)
             )}
@@ -44,6 +45,7 @@ const Sidebar = ({open}) => {
 
 Sidebar.propTypes = {
     open: PropTypes.bool.isRequired,
+    handleClick: PropTypes.func.isRequired
 };
 
 export default Sidebar;

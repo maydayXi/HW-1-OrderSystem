@@ -27,7 +27,7 @@ const Navbar = () => {
                     <img src={User} width={32} height={32} alt="user" />
                 </div>
             </nav>
-            <Sidebar open={open} />
+            <Sidebar open={open} handleClick={() => setOpen(false)} />
         </>
     )
 };
