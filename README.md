@@ -210,7 +210,7 @@
             <td>Update MenuCard style</td>
         </tr>
         <tr>
-            <td rowspan="4">2023-08-30</td>
+            <td rowspan="5">2023-08-30</td>
             <td rowspan="4">V 0.5.0</td>
             <td>New Features：add/edit order information</td>
         </tr>
@@ -222,6 +222,10 @@
         </tr>
         <tr>
             <td>Add productType.js (drinkType)</td>
+        </tr>
+        <tr>
+            <td>V 0.5.1</td>
+            <td>Fix bug：update memo</td>
         </tr>
     </tbody>
 </table>

@@ -32,7 +32,7 @@ QuantityInput.propTypes = {
 
 
 const OrderReceipt = ({receiptItems, updateMemo, handleSubmit, updateQuantity}) => {
-    const handleChange = () => updateMemo();
+    const handleChange = memo => updateMemo(memo);
     const handleClick = () => handleSubmit();
 
     return (
