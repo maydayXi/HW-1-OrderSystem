@@ -209,5 +209,19 @@
         <tr>
             <td>Update MenuCard style</td>
         </tr>
+        <tr>
+            <td rowspan="4">2023-08-30</td>
+            <td rowspan="4">V 0.5.0</td>
+            <td>New Features：add/edit order information</td>
+        </tr>
+        <tr>
+            <td>Add OrderCard、OrderMemo、OrderProduct、OrderReceipt components</td>
+        </tr>
+        <tr>
+            <td>Add Order page, order style and OrderProvider (week 2 level 2 finished)</td>
+        </tr>
+        <tr>
+            <td>Add productType.js (drinkType)</td>
+        </tr>
     </tbody>
 </table>

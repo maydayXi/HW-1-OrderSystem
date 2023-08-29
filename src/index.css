@@ -1,29 +1,29 @@
 :root {
-  /* color */
-  --color-white: #fff;
-  --color-invalid: #de3545;
-  --color-bg: #eaf2fb;
-  --color-nav-bg: #f3f2f2;
-  --color-desc: #6c757d;
-  --color-main: #f77539;
-  --color-main-hover: #f99e74;
-  --color-main-active: #fbba9c;
-  --color-main-tint-hover: #fde3dc;
-  --color-main-tint-active: #fef1eb;
-  --color-settings-hover: #d4d7da;
-  --color-settings-active: #f0f1f2;
-  --color-text: #242326;
-  --color-input-border: #dee2e6;
-  --rgba-shadow-sm: 0, 0, 0, .75;
-  --rgba-shadow-regular: 0, 0, 0, .15;
-  --rgba-overlay: 0, 0, 0, .5;
-  --rgba-input-invalid: 220, 53, 69, .25;
+	/* color */
+	--color-white: #fff;
+	--color-invalid: #de3545;
+	--color-bg: #eaf2fb;
+	--color-nav-bg: #f3f2f2;
+	--color-desc: #6c757d;
+	--color-main: #f77539;
+	--color-main-hover: #f99e74;
+	--color-main-active: #fbba9c;
+	--color-main-tint-hover: #fde3dc;
+	--color-main-tint-active: #fef1eb;
+	--color-settings-hover: #d4d7da;
+	--color-settings-active: #f0f1f2;
+	--color-text: #242326;
+	--color-input-border: #dee2e6;
+	--rgba-shadow-sm: 0, 0, 0, .75;
+	--rgba-shadow-regular: 0, 0, 0, .15;
+	--rgba-overlay: 0, 0, 0, .5;
+	--rgba-input-invalid: 220, 53, 69, .25;
 
-  /* size */
-  --shadow-sm: 0 .125rem .25rem;
-  --shadow-regular: 0 .5rem 1rem;
-  --input-padding: .375rem .75rem;
-  --input-focus: 0 0 0 .25rem;
+	/* size */
+	--shadow-sm: 0 .125rem .25rem;
+	--shadow-regular: 0 .5rem 1rem;
+	--input-padding: .375rem .75rem;
+	--input-focus: 0 0 0 .25rem;
 }
 
 * {
